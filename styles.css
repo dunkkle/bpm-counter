@@ -1,0 +1,28 @@
+/* Basic Stuff*/
+
+body {
+	background-color: #242424;
+	height: 100vh;
+	font-family: 'Dosis', sans-serif;
+	color: #efefef;
+}
+
+.main-container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.bpm-container {
+	font-size: 30px;
+}
+
+/*.bpm-counter-button {
+	padding: 20px 30px 20px 30px;
+	color: #ffffff;
+	background-color: #454545;
+	border: 1px solid pink;
+	border-radius: 7px;
+}*/
