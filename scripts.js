@@ -13,6 +13,16 @@
 // get average duration between touches, 
 // end period when last duration exceeds previous average by a lot..?
 
+
+// TODO:
+
+// make it look good
+// reset BPM counter after x period of slowdown/no input
+// 
+// when counter is reset, save 'current' BPM and float up to top of screen
+// BPM 'lock' - turns green when passes a certain consistency threshold (as the averageDelta consolidates)
+// Ripples!
+
 var clickCounter = 0;
 var clicks = [];
 var clickIntervals = [];
@@ -25,7 +35,7 @@ function calculateBpm() {
 	// Make sure that the loop is going to end before getting to the last 
 	// item in the array.
 
-	for (var i = 0; (i + 1) < (clicks.length -1); i++) {
+	for (var i = 2; (i + 1) < (clicks.length -1); i++) {
 		olderClick = clicks[i];
 		newerClick = clicks[i+1];
 
@@ -50,7 +60,7 @@ function calculateBpm() {
 		
 	//convert Interval to BPM
 
-	bpm = totalClicks/(averageClickInterval/1000);
+	bpm = 60/(averageClickInterval/1000);
 
 	//display bpm
 	document.getElementById('bpm').innerHTML = bpm;
